@@ -8,9 +8,9 @@ namespace LogIn_system
 
         }
 
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
+        OdbcConnection con = new OdbcConnection("Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=F:\\Dokumenty\\Codes\\Uhodni èíslo\\LogIn system\\bin\\Debug\\db_users.mdb");
+        OdbcCommand cmd = new OdbcCommand();
+        OdbcDataAdapter da = new OdbcDataAdapter();
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -27,12 +27,15 @@ namespace LogIn_system
             {
                 con.Open();
                 string register = "INSERT INTO tbl_users VALUES('" + txtusername.Text + "','" + txtpassword.Text + "')";
-                cmd = new OleDbCommand(register, con);
+                cmd = new OdbcCommand(register, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
 
                 MessageBox.Show("Your Account has been created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                txtpassword.Text = "";
+                txtusername.Text = "";
+                txtComPassword.Text = "";
             }
 
             else
@@ -43,6 +46,39 @@ namespace LogIn_system
                 txtComPassword.Text = "";
 
             }
+        }
+
+        private void CheckbxShowPas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckbxShowPas.Checked)
+            {
+                txtpassword.PasswordChar = '\0';
+                txtComPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtpassword.PasswordChar = '•';
+                txtComPassword.PasswordChar = '•';  
+            }
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtpassword.Text = "";
+            txtusername.Text = "";
+            txtComPassword.Text = "";
+            txtusername.Focus();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
         }
     }
 }
