@@ -50,6 +50,7 @@
             this.label6.Size = new System.Drawing.Size(101, 17);
             this.label6.TabIndex = 23;
             this.label6.Text = "Create Account";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -72,6 +73,7 @@
             this.button2.TabIndex = 21;
             this.button2.Text = "CLEAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -86,6 +88,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "LOG IN";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CheckbxShowPas
             // 
@@ -98,6 +101,7 @@
             this.CheckbxShowPas.TabIndex = 19;
             this.CheckbxShowPas.Text = "Show Password";
             this.CheckbxShowPas.UseVisualStyleBackColor = true;
+            this.CheckbxShowPas.CheckedChanged += new System.EventHandler(this.CheckbxShowPas_CheckedChanged);
             // 
             // txtpassword
             // 
@@ -107,6 +111,7 @@
             this.txtpassword.Location = new System.Drawing.Point(53, 233);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '•';
             this.txtpassword.Size = new System.Drawing.Size(216, 28);
             this.txtpassword.TabIndex = 16;
             // 
