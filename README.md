@@ -8,8 +8,6 @@ Pololetní projekt na Pva
 ## Zvolené technologie
  Celý projekt bude vytvořen v C# ve windows forms. Registračním a přihlašovacím systém bude připojen k Firebase databázi.
 
-Napřed byl projek pojmenován Login system => Proto se tak nějaké složky jmenují
-
 #### Vytvořil:
  [Ondřej Dudáček](https://github.com/OndrejDudacek)
 dudacek.on.2022@skola.ssps.cz
