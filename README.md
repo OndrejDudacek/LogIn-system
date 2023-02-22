@@ -11,3 +11,4 @@ Napřed byl projek pojmenován Login system => Proto se tak nějaké složky jme
 
 Vytvořil:
  [Ondřej Dudáček](https://github.com/OndrejDudacek)
+dudacek.on.2022@skola.ssps.cz
