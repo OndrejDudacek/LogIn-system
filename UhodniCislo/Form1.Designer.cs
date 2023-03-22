@@ -40,7 +40,7 @@ namespace UhodniCislo
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.backLogin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -161,16 +161,16 @@ namespace UhodniCislo
             this.label5.TabIndex = 10;
             this.label5.Text = "Already have an Account";
             // 
-            // label6
+            // backLogin
             // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label6.Location = new System.Drawing.Point(91, 482);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 17);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Back to Login";
+            this.backLogin.AutoSize = true;
+            this.backLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.backLogin.Location = new System.Drawing.Point(91, 482);
+            this.backLogin.Name = "backLogin";
+            this.backLogin.Size = new System.Drawing.Size(92, 17);
+            this.backLogin.TabIndex = 11;
+            this.backLogin.Text = "Back to Login";
             // 
             // frmRegister
             // 
@@ -178,7 +178,7 @@ namespace UhodniCislo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(285, 544);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.backLogin);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRegister);
@@ -215,7 +215,7 @@ namespace UhodniCislo
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label backLogin;
     }
 }
 
