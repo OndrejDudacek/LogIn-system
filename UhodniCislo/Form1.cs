@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Firebase.Database;
+using Firebase.Database.Query;
+using Google.Cloud.Firestore;
+
 
 namespace UhodniCislo
 {  
@@ -15,6 +19,7 @@ namespace UhodniCislo
         public frmRegister()
         {
             InitializeComponent();
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -23,11 +28,24 @@ namespace UhodniCislo
             txtPassword.Text = "";
             txtUsername.Text = "";
         }
-    }
 
-    public class Usernam
-    {
-        public string username { get; set; }
-        public string password { get; set; }
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            string projectId = "your-project-id";
+            FirestoreDb db = FirestoreDb.Create(projectId);
+
+            if (txtPassword.Text == txtConfPassword.Text)
+            {
+                DocumentReference docRef = db.Collection("users").Document(txtUsername.Text);
+                Dictionary<string, object> user = new Dictionary<string, object>
+                {
+                     { "username", txtUsername.Text },
+                     { "password", txtPassword.Text },
+                };
+                await docRef.SetAsync(user);
+            }
+
+        }
     }
 }
+
