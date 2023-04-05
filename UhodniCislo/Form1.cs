@@ -30,7 +30,7 @@ namespace UhodniCislo
         }
 
 
-        private async Task btnRegister_ClickAsync(object sender, EventArgs e)
+        private async Task btnRegister_Click(object sender, EventArgs e)
         {
             string projectId = "uhodni-cislo";
             FirestoreDb db = FirestoreDb.Create(projectId);
