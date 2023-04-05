@@ -29,7 +29,7 @@ namespace UhodniCislo
             txtUsername.Text = "";
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private async Task btnRegister_ClickAsync(object sender, EventArgs e)
         {
             string projectId = "your-project-id";
             FirestoreDb db = FirestoreDb.Create(projectId);
