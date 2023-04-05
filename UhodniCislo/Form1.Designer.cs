@@ -138,7 +138,7 @@ namespace UhodniCislo
             this.btnRegister.TabIndex = 8;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_ClickAsync);
             // 
             // btnClear
             // 
