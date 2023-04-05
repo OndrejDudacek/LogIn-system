@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,10 +29,15 @@ namespace UhodniCislo
             txtUsername.Text = "";
         }
 
+
         private async Task btnRegister_ClickAsync(object sender, EventArgs e)
         {
-            string projectId = "your-project-id";
+            string projectId = "uhodni-cislo";
             FirestoreDb db = FirestoreDb.Create(projectId);
+            if(txtConfPassword.Text=="" || txtPassword.Text=="" || txtUsername.Text == "")
+            {
+                MessageBox.Show("Nějaká políčka jsou prázdná!");
+            }
 
             if (txtPassword.Text == txtConfPassword.Text)
             {
@@ -43,9 +48,14 @@ namespace UhodniCislo
                      { "password", txtPassword.Text },
                 };
                 await docRef.SetAsync(user);
+
+                MessageBox.Show("Úspěšné přihlášení.");
+            }
+            else
+            {
+                MessageBox.Show("Hesla se neshodují!");
             }
 
         }
     }
 }
-
