@@ -30,8 +30,9 @@ namespace UhodniCislo
         }
 
 
-        private async Task btnRegister_Click(object sender, EventArgs e)
+        private async void btnRegister_Click(object sender, EventArgs e)
         {
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\dudacek.on.2022\\Desktop\\uhodnicislo\\Uhodni-cislo\\uhodni-cislo-1f419338feb1.json");
             string projectId = "uhodni-cislo";
             FirestoreDb db = FirestoreDb.Create(projectId);
             if(txtConfPassword.Text=="" || txtPassword.Text=="" || txtUsername.Text == "")
@@ -49,11 +50,12 @@ namespace UhodniCislo
                 };
                 await docRef.SetAsync(user);
 
-                MessageBox.Show("Úspěšné přihlášení.");
+                MessageBox.Show("Registration succesful");
             }
             else
             {
-                MessageBox.Show("Hesla se neshodují!");
+                MessageBox.Show("Passwords do not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
         }
