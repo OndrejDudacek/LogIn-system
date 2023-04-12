@@ -27,6 +27,7 @@ namespace UhodniCislo
             txtConfPassword.Text = "";
             txtPassword.Text = "";
             txtUsername.Text = "";
+            txtUsername.Focus();
         }
 
 
@@ -50,14 +51,40 @@ namespace UhodniCislo
                 };
                 await docRef.SetAsync(user);
 
-                MessageBox.Show("Registration succesful");
+                txtConfPassword.Text = "";
+                txtPassword.Text = "";
+                txtUsername.Text = "";
+
+                MessageBox.Show("Registration successful");
             }
             else
             {
-                MessageBox.Show("Passwords do not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Passwords do not match!", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtConfPassword.Text = "";
+                txtPassword.Text = "";
+                txtUsername.Text = "";
             }
 
+        }
+
+        private void checkbxShowPas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbxShowPas. Checked)
+            {
+                txtConfPassword.PasswordChar = '\0';
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtConfPassword.PasswordChar = '*';
+                txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void backLogin_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
         }
     }
 }

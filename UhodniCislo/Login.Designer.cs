@@ -51,6 +51,7 @@ namespace UhodniCislo
             this.crtAccount.Size = new System.Drawing.Size(105, 17);
             this.crtAccount.TabIndex = 23;
             this.crtAccount.Text = "Create one here";
+            this.crtAccount.Click += new System.EventHandler(this.crtAccount_Click);
             // 
             // label5
             // 
@@ -73,6 +74,7 @@ namespace UhodniCislo
             this.btnClear.TabIndex = 21;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnLogin
             // 
@@ -98,6 +100,7 @@ namespace UhodniCislo
             this.checkbxShowPas.TabIndex = 19;
             this.checkbxShowPas.Text = "Show Password";
             this.checkbxShowPas.UseVisualStyleBackColor = true;
+            this.checkbxShowPas.CheckedChanged += new System.EventHandler(this.checkbxShowPas_CheckedChanged);
             // 
             // txtPassword
             // 
@@ -107,6 +110,7 @@ namespace UhodniCislo
             this.txtPassword.Location = new System.Drawing.Point(37, 256);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(216, 28);
             this.txtPassword.TabIndex = 16;
             // 
@@ -169,7 +173,7 @@ namespace UhodniCislo
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

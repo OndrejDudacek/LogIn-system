@@ -16,5 +16,30 @@ namespace UhodniCislo
         {
             InitializeComponent();
         }
+
+        private void checkbxShowPas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbxShowPas.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text = "";
+            txtUsername.Text = "";
+            txtUsername.Focus();
+        }
+
+        private void crtAccount_Click(object sender, EventArgs e)
+        {
+            new frmRegister().Show();
+            this.Hide();
+        }
     }
 }

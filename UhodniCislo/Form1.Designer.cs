@@ -82,6 +82,7 @@ namespace UhodniCislo
             this.txtPassword.Location = new System.Drawing.Point(33, 207);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(216, 28);
             this.txtPassword.TabIndex = 4;
             // 
@@ -102,6 +103,7 @@ namespace UhodniCislo
             this.txtConfPassword.Location = new System.Drawing.Point(33, 280);
             this.txtConfPassword.Multiline = true;
             this.txtConfPassword.Name = "txtConfPassword";
+            this.txtConfPassword.PasswordChar = '*';
             this.txtConfPassword.Size = new System.Drawing.Size(216, 28);
             this.txtConfPassword.TabIndex = 6;
             // 
@@ -125,6 +127,7 @@ namespace UhodniCislo
             this.checkbxShowPas.TabIndex = 7;
             this.checkbxShowPas.Text = "Show Password";
             this.checkbxShowPas.UseVisualStyleBackColor = true;
+            this.checkbxShowPas.CheckedChanged += new System.EventHandler(this.checkbxShowPas_CheckedChanged);
             // 
             // btnRegister
             // 
@@ -173,6 +176,7 @@ namespace UhodniCislo
             this.backLogin.Size = new System.Drawing.Size(92, 17);
             this.backLogin.TabIndex = 11;
             this.backLogin.Text = "Back to Login";
+            this.backLogin.Click += new System.EventHandler(this.backLogin_Click);
             // 
             // frmRegister
             // 
