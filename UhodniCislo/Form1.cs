@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Firebase.Database;
-using Firebase.Database.Query;
 using Google.Cloud.Firestore;
 
 
@@ -33,12 +31,12 @@ namespace UhodniCislo
 
         private async void btnRegister_Click(object sender, EventArgs e)
         {
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\dudacek.on.2022\\Desktop\\uhodnicislo\\Uhodni-cislo\\uhodni-cislo-1f419338feb1.json");
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\dudacek.on.2022\\Documents\\UhodniCislo\\Uhodni-cislo\\uhodni-cislo-1f419338feb1.json");
             string projectId = "uhodni-cislo";
             FirestoreDb db = FirestoreDb.Create(projectId);
             if(txtConfPassword.Text=="" || txtPassword.Text=="" || txtUsername.Text == "")
             {
-                MessageBox.Show("Nějaká políčka jsou prázdná!");
+                MessageBox.Show("Some fields are EMPTY!");
             }
 
             if (txtPassword.Text == txtConfPassword.Text)
@@ -59,7 +57,7 @@ namespace UhodniCislo
             }
             else
             {
-                MessageBox.Show("Passwords do not match!", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Passwords do not match!");
                 txtConfPassword.Text = "";
                 txtPassword.Text = "";
                 txtUsername.Text = "";

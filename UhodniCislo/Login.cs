@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Google.Cloud.Firestore;
+
 
 namespace UhodniCislo
 {
@@ -40,6 +42,39 @@ namespace UhodniCislo
         {
             new frmRegister().Show();
             this.Hide();
+        }
+
+        private async void btnLogin_Click(object sender, EventArgs e)
+        {
+            string projectId = "uhodni-cislo";
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\dudacek.on.2022\\Documents\\UhodniCislo\\Uhodni-cislo\\uhodni-cislo-1f419338feb1.json");
+            FirestoreDb db = FirestoreDb.Create(projectId);
+
+            if (txtUsername.Text == "" || txtUsername.Text == "")
+            {
+                MessageBox.Show("Please enter username and password!");
+                return;
+            }
+
+            DocumentReference docRef = db.Collection("users").Document(txtUsername.Text);
+            DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
+            if (snapshot.Exists)
+            {
+                Dictionary<string, object> data = snapshot.ToDictionary();
+                if (data.ContainsKey("password") && (string)data["password"] == txtPassword.Text)
+                {
+                    MessageBox.Show("Login successful!");
+                    // TODO: Navigate to the main application screen
+                }
+                else
+                {
+                    MessageBox.Show("Invalid password!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Username not found!");
+            }
         }
     }
 }
