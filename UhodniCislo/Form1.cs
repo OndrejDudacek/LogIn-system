@@ -31,7 +31,7 @@ namespace UhodniCislo
 
         private async void btnRegister_Click(object sender, EventArgs e)
         {
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\dudacek.on.2022\\Documents\\UhodniCislo\\Uhodni-cislo\\uhodni-cislo-1f419338feb1.json");
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\dudacek.on.2022\\Documents\\Uhodni-cislo\\uhodni-cislo-1f419338feb1.json");
             string projectId = "uhodni-cislo";
             FirestoreDb db = FirestoreDb.Create(projectId);
             if(txtConfPassword.Text=="" || txtPassword.Text=="" || txtUsername.Text == "")
