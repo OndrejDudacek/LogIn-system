@@ -61,11 +61,23 @@ namespace UhodniCislo
                         break;
 
                     case 4:
-                        int closeTo = rnd.Next(number + 5, number - 5);
+                        int closeTo = 0;
+                        do
+                            closeTo = rnd.Next(number + 5, number - 5);
+                        while (closeTo != number);
                         Console.WriteLine("It is close to this number: " + closeTo);
                         break;
                 }
             }
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout(); 
+            this.ClientSize = new System.Drawing.Size(376, 266);
+            this.Name = "Uhodni_číslo";
+            this.ResumeLayout(false);
+
         }
     }
 }

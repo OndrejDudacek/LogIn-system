@@ -69,9 +69,9 @@ namespace UhodniCislo
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtUsername.Location = new System.Drawing.Point(33, 136);
-            this.txtUsername.Multiline = true;
+            this.txtUsername.MaxLength = 30;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(216, 28);
+            this.txtUsername.Size = new System.Drawing.Size(216, 21);
             this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
@@ -80,10 +80,10 @@ namespace UhodniCislo
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtPassword.Location = new System.Drawing.Point(33, 207);
-            this.txtPassword.Multiline = true;
+            this.txtPassword.MaxLength = 30;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(216, 28);
+            this.txtPassword.Size = new System.Drawing.Size(216, 21);
             this.txtPassword.TabIndex = 4;
             // 
             // label3
@@ -101,10 +101,10 @@ namespace UhodniCislo
             this.txtConfPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfPassword.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtConfPassword.Location = new System.Drawing.Point(33, 280);
-            this.txtConfPassword.Multiline = true;
+            this.txtConfPassword.MaxLength = 30;
             this.txtConfPassword.Name = "txtConfPassword";
             this.txtConfPassword.PasswordChar = '*';
-            this.txtConfPassword.Size = new System.Drawing.Size(216, 28);
+            this.txtConfPassword.Size = new System.Drawing.Size(216, 21);
             this.txtConfPassword.TabIndex = 6;
             // 
             // label4

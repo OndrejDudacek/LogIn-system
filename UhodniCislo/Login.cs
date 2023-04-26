@@ -47,7 +47,7 @@ namespace UhodniCislo
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             string projectId = "uhodni-cislo";
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\dudacek.on.2022\\Documents\\Uhodni-cislo\\uhodni-cislo-1f419338feb1.json");
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "uhodni-cislo-1f419338feb1.json");
             FirestoreDb db = FirestoreDb.Create(projectId);
 
             if (txtUsername.Text == "" || txtUsername.Text == "")
@@ -64,7 +64,8 @@ namespace UhodniCislo
                 if (data.ContainsKey("password") && (string)data["password"] == txtPassword.Text)
                 {
                     MessageBox.Show("Login successful!");
-                    // TODO: Navigate to the main application screen
+                    new Uhodni_číslo().Show();
+                    this.Hide();
                 }
                 else
                 {
