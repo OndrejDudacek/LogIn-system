@@ -296,9 +296,9 @@ C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCisl
 C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.frmRegister.resources
 C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.Login.resources
 C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.Properties.Resources.resources
-C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.Uhodni_číslo.resources
 C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.csproj.GenerateResource.cache
 C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.csproj.CoreCompileInputs.cache
 C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.csproj.CopyComplete
 C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.exe
 C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.pdb
+C:\Users\dudacek.on.2022\Documents\Uhodni-cislo\UhodniCislo\obj\Debug\UhodniCislo.frmUhodniCislo.resources
