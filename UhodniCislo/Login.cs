@@ -64,7 +64,7 @@ namespace UhodniCislo
                 if (data.ContainsKey("password") && (string)data["password"] == txtPassword.Text)
                 {
                     MessageBox.Show("Login successful!");
-                    new Uhodni_číslo().Show();
+                    new frmUhodniCislo().Show();
                     this.Hide();
                 }
                 else

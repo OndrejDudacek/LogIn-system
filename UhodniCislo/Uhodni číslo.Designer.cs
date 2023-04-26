@@ -1,6 +1,6 @@
 ﻿namespace UhodniCislo
 {
-    partial class Uhodni_číslo
+    partial class frmUhodniCislo
     {
         /// <summary>
         /// Required designer variable.
@@ -19,5 +19,13 @@
             }
             base.Dispose(disposing);
         }
+
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Hint1;
+        private System.Windows.Forms.Label Hint2;
+        private System.Windows.Forms.Label Hint3;
     }
 }
