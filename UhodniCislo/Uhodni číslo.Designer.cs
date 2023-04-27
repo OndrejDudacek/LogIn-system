@@ -80,6 +80,7 @@
             this.txtInsret.Size = new System.Drawing.Size(476, 25);
             this.txtInsret.TabIndex = 11;
             this.txtInsret.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInsret.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInsret_KeyPress);
             // 
             // label1
             // 

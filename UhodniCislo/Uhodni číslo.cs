@@ -13,7 +13,6 @@ namespace UhodniCislo
     public partial class frmUhodniCislo : Form
     {
         private int number;
-        private int length;
 
         public frmUhodniCislo()
         {
@@ -30,27 +29,27 @@ namespace UhodniCislo
         {
             Hint1.Text = GenerateClues();
             do
-               Hint2.Text = GenerateClues();
-            while (Hint2.Text != Hint1.Text);
+                Hint2.Text = GenerateClues();
+            while (Hint2.Text == Hint1.Text || Hint2.Text == Hint3.Text);
             do
-               Hint3.Text = GenerateClues();
-            while (Hint3.Text != Hint1.Text || Hint2.Text != Hint3.Text);
-            
+                Hint3.Text = GenerateClues();
+            while (Hint3.Text == Hint1.Text || Hint3.Text == Hint2.Text);
+
         }
 
         public string GenerateClues()
         {
             Random rnd = new Random();
-            int tmp = rnd.Next(1, 4);
+            int tmp = rnd.Next(1, 5);
             switch (tmp)
             {
                case 1:
                     int biggerThen = 0;
                     if (number > 25)
                         biggerThen = 25;
-                    else if (number > 50)
+                    if (number > 50)
                         biggerThen = 50;
-                    else if (number > 75)
+                    if (number > 75)
                         biggerThen = 75;
                     return "The number is bigger then " + biggerThen;
                     break;
@@ -73,8 +72,8 @@ namespace UhodniCislo
                 case 4:
                     int closeTo = 0;
                     do
-                        closeTo = rnd.Next(number + 5, number - 5);
-                    while (closeTo != number);
+                        closeTo = rnd.Next(number - 5, number + 5);
+                    while (closeTo == number);
                     return "It is close to this number: " + closeTo;
                     break;
 
@@ -91,18 +90,33 @@ namespace UhodniCislo
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            txtInsret.Text = "";
             GenerateNumber();
             WriteClues();
+            //txtInsret.Text = number.ToString();
+        }
+
+        private void txtInsret_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsNumber(e.KeyChar);
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            Int32.Parse(txtInsret.Text);
-
-            if (number == txtInsret.Text)
+            if (txtInsret.Text == "")
             {
-
+                MessageBox.Show("Empty field", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (number == Int32.Parse(txtInsret.Text))
+            {
+                MessageBox.Show("Correct", "You Won", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }
