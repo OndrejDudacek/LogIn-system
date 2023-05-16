@@ -8,7 +8,8 @@ Pololetní projekt na Pva.
  Celý projekt bude vytvořen v C# ve windows forms. Registračním a přihlašovacím systém bude připojen k Firestore databázi.
  
 ## Dokumentace 
- Dokumentaci k tomuto proejktu nalzente [zde](https://github.com/OndrejDudacek/Uhodni-cislo/wiki)
+ Dokumentaci k tomuto proejktu nalzente [zde](https://github.com/OndrejDudacek/Uhodni-cislo/wiki)                                            
+ Také jsem vytvořil [prezentaci](https://www.canva.com/design/DAFjE64QsTw/BTXVhZaXJb8YU2CTv79kfA/edit?utm_content=DAFjE64QsTw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) k tomuto projektu.
  
 ### Vytvořil
  [Ondřej Dudáček](https://github.com/OndrejDudacek)
